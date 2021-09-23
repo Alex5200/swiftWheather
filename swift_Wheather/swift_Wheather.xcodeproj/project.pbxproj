@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37731CBF26FCAC8200777088 /* ViewControllerForLounge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37731CBE26FCAC8200777088 /* ViewControllerForLounge.swift */; };
 		CE71C55126FC5398008FA8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C55026FC5398008FA8F6 /* AppDelegate.swift */; };
 		CE71C55326FC5398008FA8F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C55226FC5398008FA8F6 /* SceneDelegate.swift */; };
 		CE71C55526FC5398008FA8F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C55426FC5398008FA8F6 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37731CBE26FCAC8200777088 /* ViewControllerForLounge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForLounge.swift; sourceTree = "<group>"; };
 		CE71C54D26FC5398008FA8F6 /* swift_Wheather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_Wheather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE71C55026FC5398008FA8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE71C55226FC5398008FA8F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		CE71C55F26FC5399008FA8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE71C56126FC5399008FA8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE71C56F26FC585B008FA8F6 /* City_Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_Name.swift; sourceTree = "<group>"; };
-		CE71C57E26FC6504008FA8F6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../../../../Documents/pass/TableViewController.swift; sourceTree = "<group>"; };
+		CE71C57E26FC6504008FA8F6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE71C58626FC77AE008FA8F6 /* detailMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailMVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				CE71C57E26FC6504008FA8F6 /* TableViewController.swift */,
 				CE71C55C26FC5399008FA8F6 /* Assets.xcassets */,
 				CE71C55E26FC5399008FA8F6 /* LaunchScreen.storyboard */,
+				37731CBE26FCAC8200777088 /* ViewControllerForLounge.swift */,
 				CE71C56126FC5399008FA8F6 /* Info.plist */,
 				CE71C55926FC5398008FA8F6 /* swift_Wheather.xcdatamodeld */,
 			);
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37731CBF26FCAC8200777088 /* ViewControllerForLounge.swift in Sources */,
 				CE71C55526FC5398008FA8F6 /* ViewController.swift in Sources */,
 				CE71C55126FC5398008FA8F6 /* AppDelegate.swift in Sources */,
 				CE71C57F26FC6504008FA8F6 /* TableViewController.swift in Sources */,

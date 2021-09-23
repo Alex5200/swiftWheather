@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class detailMVC: UIViewController {
     var cityName = ""
+    @IBOutlet weak var subView: UIView!
     @IBOutlet weak var labelCity: UILabel!
     @IBOutlet weak var labelTemp: UILabel!
     @IBOutlet var mainView: UIView!
@@ -21,14 +22,23 @@ class detailMVC: UIViewController {
         let colorTop = UIColor(red: 89/255, green: 156/255, blue: 169/255, alpha: 1.0).cgColor
         let colorButton = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
 
-
+        ///
+        subView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        subView.layer.cornerRadius = 30
+        // 2
+        let blurEffect = UIBlurEffect(style: .dark)
+        // 3
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        // 4
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        subView.insertSubview(blurView, at: 1)
+        ///
         let grandientLayer = CAGradientLayer()
         grandientLayer.frame = self.view.bounds
         grandientLayer.colors = [colorTop, colorButton]
-        grandientLayer.locations = [0.0, 1.0]
-        self.mainView.layer.addSublayer(grandientLayer)
-        
-
+        self.mainView.layer.insertSublayer(grandientLayer, at: 0)
+        self.labelCity.textColor = UIColor.black
+        self.labelTemp.textColor = UIColor.black
     }
     
     
@@ -41,7 +51,7 @@ class detailMVC: UIViewController {
                     let name = json["location"]["name"].stringValue
                     let temp = json["current"]["temp_c"].stringValue
                     self.labelCity.text = (name)
-                    self.labelTemp.text = (temp)
+                    self.labelTemp.text = (temp + " C")
                     case .failure(let error):
                     print(error)
                 

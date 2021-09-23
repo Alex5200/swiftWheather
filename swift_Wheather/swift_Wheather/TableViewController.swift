@@ -10,29 +10,30 @@ import Alamofire
 import SwiftyJSON
 
 class TableViewController: UITableViewController {
+//
+//    @IBOutlet weak var labelCityName: UILabel!
+//    @IBOutlet weak var labelCityTemp: UILabel!
 
     @IBOutlet var cityTableView: UITableView!
     
     var cityName = ""
     struct Citys {
-        var  cityName = ""
+        var  cityNames = ""
         var  cityTemp = ""
-        
-        
     }
     
     var cityTempArray: [Citys] = []
     
     
     func currentWhaether(sity: String){
-        let url = "http://api.weatherapi.com/v1/current.json?key=7a4e32ed26e341f894370054212309&q=\(cityName)&aqi=no"
+        let url = "http://api.weatherapi.com/v1/current.json?key=7a4e32ed26e341f894370054212309&q=\(sity)"
         AF.request(url, method: .get).validate().responseJSON{response in
             switch response.result{
                 case .success(let value):
                     let json = JSON(value)
                     let name = json["location"]["name"].stringValue
                     let temp = json["current"]["temp_c"].stringValue
-                    self.cityTempArray.append(Citys(cityName: name, cityTemp: temp))
+                self.cityTempArray.append(Citys(cityNames: name, cityTemp: temp))
                     self.cityTableView.reloadData()
                 case .failure(let error):
                     print(error)
@@ -53,7 +54,7 @@ class TableViewController: UITableViewController {
         }
         alert.addAction(cancelAction)
         alert.addAction(newCityAction)
-
+        self.present(alert, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,16 +76,16 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! City_Name
-        cell.cityName.text = cityTempArray[indexPath.row].cityName
-        cell.cityName.text = String(cityTempArray[indexPath.row].cityTemp)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resuseIndefifier", for: indexPath) as! City_Name
+        cell.cityName.text = cityTempArray[indexPath.row].cityNames
+        cell.cityTemp.text = String(cityTempArray[indexPath.row].cityTemp ) + " C"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        cityName = cityTempArray[indexPath.row].cityName
-        performSegue(withIdentifier: "goDetailSegue", sender: self)
+        cityName = cityTempArray[indexPath.row].cityNames
+        performSegue(withIdentifier: "cell", sender: self)
     }
     /*
     // Override to support conditional editing of the table view.
@@ -126,7 +127,7 @@ class TableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? detailVCViewController {
+        if let vc = segue.destination as? detailMVC {
             vc.cityName = cityName
         }
     }
