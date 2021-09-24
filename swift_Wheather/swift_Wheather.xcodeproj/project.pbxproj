@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374B54BA26FDB5F000E0CB7C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 374B54B926FDB5F000E0CB7C /* SwiftyJSON */; };
 		37731CBF26FCAC8200777088 /* ViewControllerForLounge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37731CBE26FCAC8200777088 /* ViewControllerForLounge.swift */; };
 		CE71C55126FC5398008FA8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C55026FC5398008FA8F6 /* AppDelegate.swift */; };
 		CE71C55326FC5398008FA8F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C55226FC5398008FA8F6 /* SceneDelegate.swift */; };
@@ -17,7 +18,6 @@
 		CE71C56026FC5399008FA8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71C55E26FC5399008FA8F6 /* LaunchScreen.storyboard */; };
 		CE71C57026FC585B008FA8F6 /* City_Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C56F26FC585B008FA8F6 /* City_Name.swift */; };
 		CE71C57426FC596B008FA8F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE71C57326FC596B008FA8F6 /* Alamofire */; };
-		CE71C57826FC59A8008FA8F6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE71C57726FC59A8008FA8F6 /* SwiftyJSON */; };
 		CE71C57F26FC6504008FA8F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C57E26FC6504008FA8F6 /* TableViewController.swift */; };
 		CE71C58726FC77AE008FA8F6 /* detailMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71C58626FC77AE008FA8F6 /* detailMVC.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE71C57826FC59A8008FA8F6 /* SwiftyJSON in Frameworks */,
+				374B54BA26FDB5F000E0CB7C /* SwiftyJSON in Frameworks */,
 				CE71C57426FC596B008FA8F6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,7 +104,7 @@
 			name = swift_Wheather;
 			packageProductDependencies = (
 				CE71C57326FC596B008FA8F6 /* Alamofire */,
-				CE71C57726FC59A8008FA8F6 /* SwiftyJSON */,
+				374B54B926FDB5F000E0CB7C /* SwiftyJSON */,
 			);
 			productName = swift_Wheather;
 			productReference = CE71C54D26FC5398008FA8F6 /* swift_Wheather.app */;
@@ -135,7 +135,7 @@
 			mainGroup = CE71C54426FC5398008FA8F6;
 			packageReferences = (
 				CE71C57226FC596B008FA8F6 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CE71C57626FC59A8008FA8F6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				374B54B826FDB5F000E0CB7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = CE71C54E26FC5398008FA8F6 /* Products */;
 			projectDirPath = "";
@@ -319,6 +319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2S34CP5XN;
 				INFOPLIST_FILE = swift_Wheather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2S34CP5XN;
 				INFOPLIST_FILE = swift_Wheather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,6 +375,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		374B54B826FDB5F000E0CB7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CE71C57226FC596B008FA8F6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -381,26 +391,18 @@
 				minimumVersion = 5.4.4;
 			};
 		};
-		CE71C57626FC59A8008FA8F6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		374B54B926FDB5F000E0CB7C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 374B54B826FDB5F000E0CB7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		CE71C57326FC596B008FA8F6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE71C57226FC596B008FA8F6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		CE71C57726FC59A8008FA8F6 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE71C57626FC59A8008FA8F6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 

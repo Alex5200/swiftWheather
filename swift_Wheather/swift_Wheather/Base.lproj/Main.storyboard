@@ -35,6 +35,20 @@
                                 </navigationItem>
                             </items>
                         </navigationBar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="RC8-3e-656">
+                            <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="created by Alexandr Lyachov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xp-7z-21n">
+                                    <rect key="frame" x="76" y="8" width="263" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resuseIndefifier" id="b1A-iB-eat" customClass="City_Name" customModule="swift_Wheather">
                                 <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
@@ -105,19 +119,43 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="created by Alexandr Lyachov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-G5-Wro">
+                                        <rect key="frame" x="56" y="270" width="263" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fe-eY-7Sz">
+                                <rect key="frame" x="125" y="51" width="165" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-Sa-hNb">
+                                <rect key="frame" x="125" y="107" width="165" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EFo-I1-M46"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="k9F-3q-0fF"/>
                     <connections>
+                        <outlet property="LabelTime" destination="2Fe-eY-7Sz" id="0ql-X7-TMf"/>
                         <outlet property="labelCity" destination="j3Y-ji-cJV" id="iqH-Wo-Py4"/>
+                        <outlet property="labelCreated" destination="Mvm-G5-Wro" id="7C7-Ch-eVM"/>
                         <outlet property="labelTemp" destination="c80-S3-EwR" id="EEu-mP-Thr"/>
                         <outlet property="mainView" destination="0cL-pS-Je7" id="NAC-DS-mDg"/>
                         <outlet property="subView" destination="uD5-9d-M1q" id="Dy6-z1-6BS"/>
+                        <outlet property="textYourtime" destination="YtG-Sa-hNb" id="wCX-HQ-EXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feL-N1-rCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
